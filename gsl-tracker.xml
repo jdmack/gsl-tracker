@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
     <ModulePrefs title="GSL Tracker" 
-        height="100">  
-        <Require feature="tabs"/>
+        height="1000" 
+        scrolling="true"
+        author="WolfBro"
+        author_email="wolfbro@gmail.com"
+        
+    >  
+        <Require feature="tabs" />
     </ModulePrefs>
     <Content type="html">
         <![CDATA[ 
@@ -19,6 +24,11 @@
 
         }
 
+
+        gadgets.util.registerOnLoadHandler(init);
+    </script>
+
+    <script type="text/javascript">
         function cSwap(cell){
             if (cell.className == "watched") {
                 cell.className = "unwatched";
@@ -27,8 +37,6 @@
                 cell.className = "watched";
             }
         }
-
-        gadgets.util.registerOnLoadHandler(init);
     </script>
 
 <!-- CSS -->
