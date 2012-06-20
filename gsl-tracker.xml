@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="GSL Tracker" /> 
-  <Content type="html">
-     <![CDATA[ 
+    <ModulePrefs title="GSL Tracker" 
+        height="100">  
+        <Require feature="tabs"/>
+    </ModulePrefs>
+    <Content type="html">
+        <![CDATA[ 
 
 <!-- JavaScript -->
 
     <script type="text/javascript">
+
+        var tabs = new gadgets.TabSet(__MODULE_ID__, "Finals");
+
+        function init() {
+            tabs.addTab("Finals", contentContainer: document.getElementById("finals_id")});
+            tabs.addTab("Rest", contentContainer: document.getElementById("rest_id")});
+
+        }
+
         function cSwap(cell){
             if (cell.className == "watched") {
                 cell.className = "unwatched";
@@ -15,6 +27,8 @@
                 cell.className = "watched";
             }
         }
+
+        gadgets.util.registerOnLoadHandler(init);
     </script>
 
 <!-- CSS -->
@@ -60,7 +74,8 @@
 
 <!-- HTML -->
 
-<table class=gsl>
+<div id="rest_id">
+    <table class=gsl>
 
 <!---------------------- ROUND OF 32 -------------------------->
         <tr>
@@ -454,8 +469,10 @@
         </tr>
 
     </table>
-<!---------------------- Finals -------------------------->
+</div>
 
+<!---------------------- Finals -------------------------->
+<div id="fianls_id">
     <table class=gsl>
         <tr>
             <td class=round colspan="10">Finals</td>
@@ -481,7 +498,8 @@
             <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
         </tr>
     </table>
+</div>
 
      ]]>
-  </Content> 
+    </Content> 
 </Module>
