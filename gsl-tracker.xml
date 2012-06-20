@@ -19,11 +19,13 @@
         var tabs = new gadgets.TabSet(__MODULE_ID__, "Finals");
 
         function init() {
+            tabs.addTab("Ro32", contentContainer: document.getElementById("ro32_id")});
+            tabs.addTab("Ro16", contentContainer: document.getElementById("ro16_id")});
+            tabs.addTab("Ro8", contentContainer: document.getElementById("ro8_id")});
+            tabs.addTab("Ro4", contentContainer: document.getElementById("ro4_id")});
             tabs.addTab("Finals", contentContainer: document.getElementById("finals_id")});
-            tabs.addTab("Rest", contentContainer: document.getElementById("rest_id")});
 
         }
-
 
         gadgets.util.registerOnLoadHandler(init);
     </script>
@@ -82,10 +84,11 @@
 
 <!-- HTML -->
 
-<div id="rest_id">
+<!---------------------- ROUND OF 32 -------------------------->
+
+<div id="ro32_id">
     <table class=gsl>
 
-<!---------------------- ROUND OF 32 -------------------------->
         <tr>
             <td class=round colspan="16">Round of 32</td>
         </tr>
@@ -269,8 +272,12 @@
             <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
             <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
         </tr>
-
+    </table>
+</div>
 <!---------------------- ROUND OF 16 -------------------------->
+
+<div id="ro16_id">
+    <table class=gsl>
 
         <tr>
             <td class=round colspan="16">Round of 16</td>
@@ -381,10 +388,11 @@
         </tr>
 
     </table>
+</div>
 
-
-    <table class=gsl>
 <!---------------------- ROUND OF 8 -------------------------->
+<div id="ro8_id">
+    <table class=gsl>
 
         <tr>
             <td class=round colspan="16">Round of 8</td>
@@ -436,8 +444,11 @@
             <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
             <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
         </tr>
-
+    </table>
+</div>
 <!---------------------- ROUND OF 4 -------------------------->
+<div id="ro4_id">
+    <table class=gsl>
 
         <tr>
             <td class=round colspan="16">Round of 4</td>
@@ -480,7 +491,7 @@
 </div>
 
 <!---------------------- Finals -------------------------->
-<div id="fianls_id">
+<div id="finals_id">
     <table class=gsl>
         <tr>
             <td class=round colspan="10">Finals</td>
