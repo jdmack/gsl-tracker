@@ -1,0 +1,4 @@
+- Create the state array that will be part of <UserPrefs>
+- Add code that will correlate the <UserPrefs> array to the cellIDs array.
+- Add code that will load the states saved and update cells when the gadget loads.
+- GG
