@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="GSL Tracker" height="330" width="1000" scrolling="true" >
-    <Require feature="tabs" />
-  </ModulePrefs>
+    <ModulePrefs title="GSL Tracker" 
+        height="330" width="1000" scrolling="true" >
+        <Require feature="tabs" />
+        <Require feature="setprefs" />
+    </ModulePrefs>
+    <UserPref
+        name="cellStates"
+        default_value="0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0"
+        datatype="hidden" 
+    />
   <Content type="html">
   <![CDATA[
 
     <script type="text/javascript">
+
+    var tabs = new gadgets.TabSet(__MODULE_ID__, "Ro32");
+
+    function init() {
+    
+        tabs.addTab("Ro32", {
+           contentContainer: document.getElementById("ro32_id")
+        });
+        tabs.addTab("Ro16", {
+           contentContainer: document.getElementById("ro16_id")
+        });
+        tabs.addTab("Ro8", {
+           contentContainer: document.getElementById("ro8_id")
+        });
+       tabs.addTab("Ro4", {
+           contentContainer: document.getElementById("ro4_id")
+        });
+        tabs.addTab("Finals", {
+           contentContainer: document.getElementById("finals_id")
+        });
+    }
+
+    gadgets.util.registerOnLoadHandler(init);
+    gadgets.util.registerOnLoadHandler(init_cells);
+    </script>
+
+    <script type="text/javascript">
+
+
         var cellIDs = new Array(
             "r32gam1g1", "r32gam1g2", "r32gam1g3", "r32gam2g1", "r32gam2g2",
             "r32gam2g3", "r32gam3g1", "r32gam3g2", "r32gam3g3", "r32gam4g1",
@@ -53,52 +89,31 @@
             "finalg7",
         );
 
+        function init_cells() {
+            var prefs = new gadgets.Prefs();
+            var state = prefs.getString("cellStates");
+            var stateArray = state.split("|");
+            for(i = 0; i < 217; i++) {
+                if(stateArray[i] == 1) {
+                    var this_cell = document.getElementById(cellIDs[i]);
+                    this_cell.className = "watched";
+                }
+            }
+            var this_cell = document.getElementById("test");
+            this_cell.className = "watched";
+        }
 
 
-    var tabs = new gadgets.TabSet(__MODULE_ID__, "Ro32");
-    function init() {
-    
-        tabs.addTab("Ro32", {
-           contentContainer: document.getElementById("ro32_id")
-        });
-        tabs.addTab("Ro16", {
-           contentContainer: document.getElementById("ro16_id")
-        });
-   tabs.addTab("Ro8", {
-           contentContainer: document.getElementById("ro8_id")
-        });
-   tabs.addTab("Ro4", {
-           contentContainer: document.getElementById("ro4_id")
-        });
-   tabs.addTab("Finals", {
-           contentContainer: document.getElementById("finals_id")
-        });
-        
-    }
 
-    gadgets.util.registerOnLoadHandler(init);
-    </script>
-
-    <script type="text/javascript">
         function cSwap(cell){
             if (cell.className == "watched") {
                 cell.className = "unwatched";
-                updateCell(cell, 0);
             }
             else if (cell.className == "unwatched") {
                 cell.className = "watched";
-                updateCell(cell, 1);
             }
         }
 
-        function updateCell(cell, value) {
-            for(i = 0; i < cellIDs.length; i++) {
-                if(cellIDs[i] == cell) {
-                    cellIDs[i] = value;
-                    break;
-                }
-            }
-        }
     </script>
 
 
@@ -145,7 +160,7 @@
 
 
 
-<div id="ro32_id">Version 20 
+<div id="ro32_id">Version 26
     <br />
     <table class=gsl>
         <tr>
