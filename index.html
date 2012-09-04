@@ -1,56 +1,9 @@
 <html>
     <head>
         <title>GSL</title>
-        <style type="text/css">
-        table.gsl {
-            border: 1;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: black;
-        }
-        td.watched {
-            background-color: #00FF00;
-        }
-        td.unwatched {
-            background-color: red;
-        }
-        td.match {
-            background-color: #787878;
-            text-align: center;
-        }
-        td.game {
-            background-color: #989898;
-            text-align: center;
-        }
-        td.round {
-            background-color: #585858;
-            text-align: center;
-        }
-        td.group {
-            background-color: #A8A8A8;
-        }         
-        td.day {
-            background-color: #A8A8A8;
-        }         
-        td.blank {
-            background-color: #A8A8A8;
-            text-align: center;
-        }         
-        </style>
-
-        <script type="text/javascript">
-       function cSwap(cell){  
-            if (cell.className == "watched") {
-                cell.className = "unwatched";
-            }
-            else if (cell.className == "unwatched") {
-                cell.className = "watched";
-            }
-        } 
-        </script>
+        <link rel="stylesheet" href="main.css" type="text/css" />
+        <script type="text/javascript" src="gsl-tracker.js"></script>
     </head>
-
-
 
     <body>
 
