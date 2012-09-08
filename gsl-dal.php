@@ -50,7 +50,8 @@
         if($result->num_rows > 0) {
             $return = array();
             while($row = $result->fetch_assoc()) {
-                array_push($return, array($row['name'] => $row['value']));
+                //array_push($return, array($row['name'] => $row['value']));
+                $return[$row['name']] = $row['value'];
             }
             return $return;
         }
@@ -63,6 +64,7 @@
 
     function dal_update($name, $value)
     {
+        echo "in dal";
         $mysqli = dal_createConnection();
 
         $query = "UPDATE status SET value='$value' WHERE name='$name'";
@@ -74,6 +76,7 @@
         else {
             echo "Error occured";
         }
+        echo "done";
     }
 
     /*

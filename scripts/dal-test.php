@@ -13,22 +13,23 @@
     }
     echo "\n";
 
-/*
+
     // selectAll test
     echo "selectAll() test: \n";
     $results = dal_selectAll();
     echo "\tresults: \n";
-    foreach($results as $row) {
+  print_r($results);
+  /*  foreach($results as $row) {
         foreach($row as $name => $value) {
             echo "$name\t$value\n";
         }
     }
-
-    echo "\n";
 */
+    echo "\n";
+
 
     // update test
-
+/*
     echo "update() test: \n";
 
     dal_update("r32gam1g1", "watched");
@@ -43,6 +44,6 @@
     foreach($results as $name => $value) {
         echo "$name\t$value\n";
     }
-
+*/
 
 ?>

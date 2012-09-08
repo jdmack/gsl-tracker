@@ -32,3 +32,8 @@
         background-color: #A8A8A8;
         text-align: center;
     }
+    div.status {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }

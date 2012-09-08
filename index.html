@@ -3,431 +3,436 @@
         <title>GSL</title>
         <link rel="stylesheet" href="main.css" type="text/css" />
         <script type="text/javascript" src="gsl-tracker.js"></script>
+        <script type="text/javascript">
+            window.onload = init;
+        </script>
     </head>
 
     <body>
 
+    <div id="status" class="status"></div>
+    <div id="ro32_id">
+        <table class=gsl>
+            <tr>
+                <td class=round colspan="16">Round of 32</td>
+            </tr>
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=match colspan="3">Match 1</td>
+                <td class=match colspan="3">Match 2</td>
+                <td class=match colspan="3">Match 3</td>
+                <td class=match colspan="3">Match 4</td>
+                <td class=match colspan="3">Match 5</td>
+            </tr>
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+            </tr>
 
-    <table class=gsl>
-
-<!---------------------- ROUND OF 32 -------------------------->
-        <tr>
-            <td class=round colspan="16">Round of 32</td>
-        </tr>
-
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=match colspan="3">Match 1</td>
-            <td class=match colspan="3">Match 2</td>
-            <td class=match colspan="3">Match 3</td>
-            <td class=match colspan="3">Match 4</td>
-            <td class=match colspan="3">Match 5</td>
-        </tr>
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-        </tr>
-
-        <tr>
-            <td class=group class=group class=group>Group A</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group class=group>Group A</td>
+                <td id="r32gam1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gam5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
 
-        <tr>
-            <td class=group class=group>Group B</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group B</td>
+                <td id="r32gbm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gbm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=group class=group>Group C</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group C</td>
+                <td id="r32gcm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gcm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=group class=group>Group D</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group D</td>
+                <td id="r32gdm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gdm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=group class=group>Group E</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group E</td>
+                <td id="r32gem1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gem5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=group class=group>Group F</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group F</td>
+                <td id="r32gfm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32gfm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=group class=group>Group G</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group G</td>
+                <td id="r32ggm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ggm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=group class=group>Group H</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group H</td>
+                <td id="r32ghm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r32ghm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
+        </table>
+    </div>
+    <div id="ro16_id">
+        <table class=gsl>
+            <tr>
+                <td class=round colspan="16">Round of 16</td>
+            </tr>
 
-<!---------------------- ROUND OF 16 -------------------------->
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=match colspan="3">Match 1</td>
+                <td class=match colspan="3">Match 2</td>
+                <td class=match colspan="3">Match 3</td>
+                <td class=match colspan="3">Match 4</td>
+                <td class=match colspan="3">Match 5</td>
+            </tr>
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+            </tr>
 
-        <tr>
-            <td class=round colspan="16">Round of 16</td>
-        </tr>
-
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=match colspan="3">Match 1</td>
-            <td class=match colspan="3">Match 2</td>
-            <td class=match colspan="3">Match 3</td>
-            <td class=match colspan="3">Match 4</td>
-            <td class=match colspan="3">Match 5</td>
-        </tr>
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-        </tr>
-
-        <tr>
-            <td class=group class=group>Group A</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
-
-
-        <tr>
-            <td class=group class=group>Group B</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
-
-        <tr>
-            <td class=group class=group>Group C</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
-
-        <tr>
-            <td class=group class=group>Group D</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
-
-    </table>
+            <tr>
+                <td class=group class=group>Group A</td>
+                <td id="r16gam1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gam5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
 
-    <table class=gsl>
-<!---------------------- ROUND OF 8 -------------------------->
+            <tr>
+                <td class=group class=group>Group B</td>
+                <td id="r16gbm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gbm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=round colspan="16">Round of 8</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group C</td>
+                <td id="r16gcm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gcm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=match colspan="5">Match 1</td>
-            <td class=match colspan="5">Match 2</td>
-        </tr>
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 4</td>
-            <td class=game class=game>Game 5</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 4</td>
-            <td class=game class=game>Game 5</td>
-        </tr>
+            <tr>
+                <td class=group class=group>Group D</td>
+                <td id="r16gdm1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm3g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm3g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm3g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm4g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm4g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm4g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm5g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm5g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r16gdm5g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
+        </table>
+    </div>
+    <div id="ro8_id">
+        <table class=gsl>
+            <tr>
+                <td class=round colspan="16">Round of 8</td>
+            </tr>
 
-        <tr>
-            <td class=day>Day 1</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=match colspan="5">Match 1</td>
+                <td class=match colspan="5">Match 2</td>
+            </tr>
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 4</td>
+                <td class=game class=game>Game 5</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 4</td>
+                <td class=game class=game>Game 5</td>
+            </tr>
 
-        <tr>
-            <td class=day class=day>Day 2</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=day>Day 1</td>
+                <td id="r8d1m1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m1g4" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m1g5" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m2g4" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d1m2g5" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
 
-<!---------------------- ROUND OF 4 -------------------------->
+            <tr>
+                <td class=day class=day>Day 2</td>
+                <td id="r8d2m1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m1g4" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m1g5" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m2g4" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r8d2m2g5" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
+        </table>
+    </div>
+    <div id="ro4_id">
+        <table class=gsl>
+            <tr>
+                <td class=round colspan="16">Round of 4</td>
+            </tr>
 
-        <tr>
-            <td class=round colspan="16">Round of 4</td>
-        </tr>
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=match colspan="5">Match 1</td>
+                <td class=match colspan="5">Match 2</td>
+            </tr>
+            <tr>
+                <td class=blank>&nbsp</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 4</td>
+                <td class=game class=game>Game 5</td>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 4</td>
+                <td class=game class=game>Game 5</td>
+            </tr>
 
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=match colspan="5">Match 1</td>
-            <td class=match colspan="5">Match 2</td>
-        </tr>
-        <tr>
-            <td class=blank>&nbsp</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 4</td>
-            <td class=game class=game>Game 5</td>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 4</td>
-            <td class=game class=game>Game 5</td>
-        </tr>
+            <tr>
+                <td class=day>Day 1</td>
+                <td id="r4d1m1g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m1g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m1g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m1g4" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m1g5" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m2g1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m2g2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m2g3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m2g4" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="r4d1m2g5" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
+        </table>
+    </div>
+    <div id="finals_id">
+        <table class=gsl>
+            <tr>
+                <td class=round colspan="10">Finals</td>
+            </tr>
 
-        <tr>
-            <td class=day>Day 1</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
+            <tr>
+                <td class=game class=game>Game 1</td>
+                <td class=game class=game>Game 2</td>
+                <td class=game class=game>Game 3</td>
+                <td class=game class=game>Game 4</td>
+                <td class=game class=game>Game 5</td>
+                <td class=game class=game>Game 6</td>
+                <td class=game class=game>Game 7</td>
+            </tr>
 
-    </table>
-<!---------------------- Finals -------------------------->
+            <tr>
+                <td id="finalg1" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="finalg2" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="finalg3" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="finalg4" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="finalg5" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="finalg6" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+                <td id="finalg7" class="unwatched" onclick='cSwap(this)'>&nbsp</td>
+            </tr>
+        </table>
+    </div>
 
-    <table class=gsl>
-        <tr>
-            <td class=round colspan="10">Finals</td>
-        </tr>
 
-        <tr>
-            <td class=game class=game>Game 1</td>
-            <td class=game class=game>Game 2</td>
-            <td class=game class=game>Game 3</td>
-            <td class=game class=game>Game 4</td>
-            <td class=game class=game>Game 5</td>
-            <td class=game class=game>Game 6</td>
-            <td class=game class=game>Game 7</td>
-        </tr>
 
-        <tr>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-            <td class="unwatched" onclick='cSwap(this)'>&nbsp</td>
-        </tr>
-    </table>
+
+
     </body>
 <html>
