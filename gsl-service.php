@@ -1,5 +1,5 @@
 <?php
-    include('gsl-dal.php');
+    require_once('gsl-dal.php');
 
     // Read request
     /* Actions:
