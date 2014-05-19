@@ -1,3 +1,7 @@
+var service_host = "192.168.1.10
+var service_name = "192.168.1.10
+
+
 var cellIDs = new Array(
     "r32gam1g1", "r32gam1g2", "r32gam1g3", "r32gam2g1", "r32gam2g2", 
     "r32gam2g3", "r32gam3g1", "r32gam3g2", "r32gam3g3", "r32gam4g1", 
