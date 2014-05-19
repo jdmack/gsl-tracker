@@ -41,7 +41,7 @@
             }
         }
 
-        xmlhttp.open("GET","http://192.168.1.10/gsl-tracker/gsl-service.php?action=update&name=" + id + "&value=" + value,true);
+        xmlhttp.open("GET","http://wulph.com/gsl-tracker/gsl-service.php?action=update&name=" + id + "&value=" + value,true);
         xmlhttp.send();
 
     }
@@ -62,7 +62,7 @@
             }
         }
 
-        xmlhttp.open("GET","http://192.168.1.10/gsl-tracker/gsl-service.php?action=selectAll", true);
+        xmlhttp.open("GET","http://wulph.com/gsl-tracker/gsl-service.php?action=selectAll", true);
         xmlhttp.send();
 
     }

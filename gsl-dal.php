@@ -4,7 +4,7 @@
     function dal_createConnection()
     {
         $host     = "localhost";
-        $dbname   = "gsl-tracker";
+        $dbname   = "gsl";
         $username = "gsltracker";
         $password = "9Wa5r2A8YTxbZAd&K3B5";
 
